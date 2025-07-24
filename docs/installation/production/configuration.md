@@ -19,7 +19,7 @@ make configure
     ```
     Text editor (nvim):
     Enter seed repo (github.com/khuedoan/homelab): github.com/example/homelab
-    Enter your domain (khuedoan.com): example.com
+    Enter your domain (serendipity-work.com): example.com
     ```
 
 It will prompt you to edit the inventory:

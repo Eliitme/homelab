@@ -1,5 +1,5 @@
 data "cloudflare_zone" "zone" {
-  name = "khuedoan.com"
+  name = "serendipity-work.com"
 }
 
 data "cloudflare_api_token_permission_groups" "all" {}
@@ -12,7 +12,7 @@ resource "random_password" "tunnel_secret" {
 resource "cloudflare_tunnel" "homelab" {
   account_id = var.cloudflare_account_id
   name       = "homelab"
-  secret     = base64encode(random_password.tunnel_secret.result)
+  secret     = random_password.tunnel_secret.result
 }
 
 # Not proxied, not accessible. Just a record for auto-created CNAMEs by external-dns.
@@ -40,7 +40,7 @@ resource "kubernetes_secret" "cloudflared_credentials" {
       AccountTag   = var.cloudflare_account_id
       TunnelName   = cloudflare_tunnel.homelab.name
       TunnelID     = cloudflare_tunnel.homelab.id
-      TunnelSecret = base64encode(random_password.tunnel_secret.result)
+      TunnelSecret = random_password.tunnel_secret.result
     })
   }
 }

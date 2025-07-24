@@ -1,9 +1,9 @@
 # Khue's Homelab
 
-**[Features](#features) • [Get Started](#get-started) • [Documentation](https://homelab.khuedoan.com)**
+**[Features](#features) • [Get Started](#get-started) • [Documentation](https://homelab.serendipity-work.com)**
 
 [![tag](https://img.shields.io/github/v/tag/khuedoan/homelab?style=flat-square&logo=semver&logoColor=white)](https://github.com/khuedoan/homelab/tags)
-[![document](https://img.shields.io/website?label=document&logo=gitbook&logoColor=white&style=flat-square&url=https%3A%2F%2Fhomelab.khuedoan.com)](https://homelab.khuedoan.com)
+[![document](https://img.shields.io/website?label=document&logo=gitbook&logoColor=white&style=flat-square&url=https%3A%2F%2Fhomelab.serendipity-work.com)](https://homelab.serendipity-work.com)
 [![license](https://img.shields.io/github/license/khuedoan/homelab?style=flat-square&logo=gnu&logoColor=white)](https://www.gnu.org/licenses/gpl-3.0.html)
 [![stars](https://img.shields.io/github/stars/khuedoan/homelab?logo=github&logoColor=white&color=gold&style=flat-square)](https://github.com/khuedoan/homelab)
 
@@ -33,12 +33,12 @@ More information can be found in [the roadmap](#roadmap) below.
 ![Hardware](https://user-images.githubusercontent.com/27996771/98970963-25137200-2543-11eb-8f2d-f9a2d45756ef.JPG)
 
 - 4 × NEC SFF `PC-MK26ECZDR` (Japanese version of the ThinkCentre M700):
-    - CPU: `Intel Core i5-6600T @ 2.70GHz`
-    - RAM: `16GB`
-    - SSD: `128GB`
+  - CPU: `Intel Core i5-6600T @ 2.70GHz`
+  - RAM: `16GB`
+  - SSD: `128GB`
 - TP-Link `TL-SG108` switch:
-    - Ports: `8`
-    - Speed: `1000Mbps`
+  - Ports: `8`
+  - Speed: `1000Mbps`
 
 ### Features
 
@@ -65,29 +65,29 @@ More information can be found in [the roadmap](#roadmap) below.
 Some demo videos and screenshots are shown here.
 They can't capture all the project's features, but they are sufficient to get a concept of it.
 
-| Demo                                                                                                            |
-| :--:                                                                                                            |
-| [![][deploy-demo]](https://asciinema.org/a/xkBRkwC6e9RAzVuMDXH3nGHp7)                                           |
-| Deploy with a single command (after updating the configuration files)                                           |
-| [![][pxe-demo]](https://www.youtube.com/watch?v=y-d7btNNAT8)                                                    |
-| PXE boot                                                                                                        |
-| [![][hubble-demo]][hubble-demo]                                                                                 |
-| Observe network traffic with Hubble, built on top of [Cilium](https://cilium.io) and eBPF                       |
-| [![][homepage-demo]][homepage-demo]                                                                             |
-| Homepage powered by... [Homepage](https://gethomepage.dev)                                                      |
-| [![][grafana-demo]][grafana-demo]                                                                               |
-| Monitoring dashboard powered by [Grafana](https://grafana.com)                                                  |
-| [![][gitea-demo]][gitea-demo]                                                                                   |
-| Git server powered by [Gitea](https://gitea.io/en-us)                                                           |
-| [![][matrix-demo]][matrix-demo]                                                                                 |
-| [Matrix](https://matrix.org/) chat server                                                                       |
-| [![][woodpecker-demo]][woodpecker-demo]                                                                         |
-| Continuous integration with [Woodpecker CI](https://woodpecker-ci.org)                                          |
-| [![][argocd-demo]][argocd-demo]                                                                                 |
-| Continuous deployment with [ArgoCD](https://argoproj.github.io/cd)                                              |
-| [![][alert-demo]][alert-demo]                                                                                   |
-| [ntfy](https://ntfy.sh) displaying received alerts                                                              |
-| [![][ai-demo]][ai-demo]                                                                                         |
+|                                                      Demo                                                       |
+| :-------------------------------------------------------------------------------------------------------------: |
+|                      [![][deploy-demo]](https://asciinema.org/a/xkBRkwC6e9RAzVuMDXH3nGHp7)                      |
+|                      Deploy with a single command (after updating the configuration files)                      |
+|                          [![][pxe-demo]](https://www.youtube.com/watch?v=y-d7btNNAT8)                           |
+|                                                    PXE boot                                                     |
+|                                         [![][hubble-demo]][hubble-demo]                                         |
+|            Observe network traffic with Hubble, built on top of [Cilium](https://cilium.io) and eBPF            |
+|                                       [![][homepage-demo]][homepage-demo]                                       |
+|                           Homepage powered by... [Homepage](https://gethomepage.dev)                            |
+|                                        [![][grafana-demo]][grafana-demo]                                        |
+|                         Monitoring dashboard powered by [Grafana](https://grafana.com)                          |
+|                                          [![][gitea-demo]][gitea-demo]                                          |
+|                              Git server powered by [Gitea](https://gitea.io/en-us)                              |
+|                                         [![][matrix-demo]][matrix-demo]                                         |
+|                                    [Matrix](https://matrix.org/) chat server                                    |
+|                                     [![][woodpecker-demo]][woodpecker-demo]                                     |
+|                     Continuous integration with [Woodpecker CI](https://woodpecker-ci.org)                      |
+|                                         [![][argocd-demo]][argocd-demo]                                         |
+|                       Continuous deployment with [ArgoCD](https://argoproj.github.io/cd)                        |
+|                                          [![][alert-demo]][alert-demo]                                          |
+|                               [ntfy](https://ntfy.sh) displaying received alerts                                |
+|                                             [![][ai-demo]][ai-demo]                                             |
 | Self-hosted AI powered by [Ollama](https://ollama.com) (experimental, not very fast because I don't have a GPU) |
 
 [deploy-demo]: https://asciinema.org/a/xkBRkwC6e9RAzVuMDXH3nGHp7.svg
@@ -239,25 +239,25 @@ They can't capture all the project's features, but they are sufficient to get a 
 
 ## Get Started
 
-- [Try it out locally](https://homelab.khuedoan.com/installation/sandbox) without any hardware (just 4 commands!)
-- [Deploy on real hardware](https://homelab.khuedoan.com/installation/production/prerequisites) for production workload
+- [Try it out locally](https://homelab.serendipity-work.com/installation/sandbox) without any hardware (just 4 commands!)
+- [Deploy on real hardware](https://homelab.serendipity-work.com/installation/production/prerequisites) for production workload
 
 ## Roadmap
 
-See [roadmap](https://homelab.khuedoan.com/reference/roadmap) and [open issues](https://github.com/khuedoan/homelab/issues) for a list of proposed features and known issues.
+See [roadmap](https://homelab.serendipity-work.com/reference/roadmap) and [open issues](https://github.com/khuedoan/homelab/issues) for a list of proposed features and known issues.
 
 ## Contributing
 
 Any contributions you make are greatly appreciated.
 
-Please see [contributing guide](https://homelab.khuedoan.com/reference/contributing) for more information.
+Please see [contributing guide](https://homelab.serendipity-work.com/reference/contributing) for more information.
 
 ## License
 
 Copyright &copy; 2020 - 2024 Khue Doan
 
 Distributed under the GPLv3 License.
-See [license page](https://homelab.khuedoan.com/reference/license) or `LICENSE.md` file for more information.
+See [license page](https://homelab.serendipity-work.com/reference/license) or `LICENSE.md` file for more information.
 
 ## Acknowledgements
 

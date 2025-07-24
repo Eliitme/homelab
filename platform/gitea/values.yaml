@@ -4,8 +4,10 @@ gitea:
     className: nginx
     annotations:
       cert-manager.io/cluster-issuer: letsencrypt-prod
+      external-dns.alpha.kubernetes.io/target: "homelab-tunnel.serendipity-work.com"
+      external-dns.alpha.kubernetes.io/cloudflare-proxied: "true"
     hosts:
-      - host: &host git.khuedoan.com
+      - host: &host git.serendipity-work.com
         paths:
           - path: /
             pathType: Prefix
@@ -19,7 +21,7 @@ gitea:
     config:
       server:
         LANDING_PAGE: explore
-        ROOT_URL: https://git.khuedoan.com
+        ROOT_URL: https://git.serendipity-work.com
         OFFLINE_MODE: true
       repository:
         DISABLED_REPO_UNITS: repo.wiki,repo.projects,repo.packages

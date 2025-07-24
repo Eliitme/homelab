@@ -1,6 +1,6 @@
 argo-cd:
   global:
-    domain: argocd.khuedoan.com
+    domain: argocd.serendipity-work.com
   configs:
     params:
       server.insecure: true
@@ -16,6 +16,8 @@ argo-cd:
       ingressClassName: nginx
       annotations:
         cert-manager.io/cluster-issuer: letsencrypt-prod
+        external-dns.alpha.kubernetes.io/target: "homelab-tunnel.serendipity-work.com"
+        external-dns.alpha.kubernetes.io/cloudflare-proxied: "true"
       tls: true
     metrics: &metrics
       enabled: true
@@ -43,15 +45,15 @@ argocd-apps:
               - path: apps/*
       template:
         metadata:
-          name: '{{path.basename}}'
+          name: "{{path.basename}}"
         spec:
           destination:
             name: in-cluster
-            namespace: '{{path.basename}}'
-          project: default  # TODO
+            namespace: "{{path.basename}}"
+          project: default # TODO
           source:
             repoURL: *repoURL
-            path: '{{path}}'
+            path: "{{path}}"
             targetRevision: *revision
           syncPolicy:
             automated:

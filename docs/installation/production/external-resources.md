@@ -8,7 +8,7 @@ Although I try to keep the amount of external resources to the minimum, there's 
 Below is a list of external resources and why we need them (also see some [alternatives](#alternatives) below).
 
 | Provider        | Resource  | Purpose                                                                                                     |
-| --------        | --------  | -------                                                                                                     |
+| --------------- | --------- | ----------------------------------------------------------------------------------------------------------- |
 | Terraform Cloud | Workspace | Terraform state backend                                                                                     |
 | Cloudflare      | DNS       | DNS and [DNS-01 challenge](https://letsencrypt.org/docs/challenge-types/#dns-01-challenge) for certificates |
 | Cloudflare      | Tunnel    | Public services to the internet without port forwarding                                                     |
@@ -41,7 +41,7 @@ If you decide to use a [different Terraform backend](https://www.terraform.io/la
 <!-- This API token will affect the below accounts and zones, along with their respective permissions -->
 
 <!-- └── Khue Doan - Argo Tunnel:Edit, Account Settings:Read -->
-<!--     └── khuedoan.com - Zone:Read, DNS:Edit -->
+<!--     └── serendipity-work.com - Zone:Read, DNS:Edit -->
 
 <!-- Client IP Address Filtering -->
 
@@ -65,15 +65,15 @@ If you decide to use a [different Terraform backend](https://www.terraform.io/la
 To avoid vendor lock-in, each external provider must have an equivalent alternative that is easy to replace:
 
 - Terraform Cloud:
-    - Any other [Terraform backends](https://www.terraform.io/language/settings/backends)
+  - Any other [Terraform backends](https://www.terraform.io/language/settings/backends)
 - Cloudflare DNS:
-    - Update cert-manager and external-dns to use a different provider
-    - [Alternate DNS setup](../../how-to-guides/alternate-dns-setup.md)
+  - Update cert-manager and external-dns to use a different provider
+  - [Alternate DNS setup](../../how-to-guides/alternate-dns-setup.md)
 - Cloudflare Tunnel:
-    - Use port forwarding if it's available
-    - Create a small VPS in the cloud and utilize Wireguard to route traffic via it
-    - Access everything via VPN
-    - See also [awesome tunneling](https://github.com/anderspitman/awesome-tunneling)
+  - Use port forwarding if it's available
+  - Create a small VPS in the cloud and utilize Wireguard to route traffic via it
+  - Access everything via VPN
+  - See also [awesome tunneling](https://github.com/anderspitman/awesome-tunneling)
 - ntfy:
-    - [Self-host your own ntfy server](https://docs.ntfy.sh/install)
-    - Any other [integration supported by Grafana Alerting](https://grafana.com/docs/grafana/latest/alerting/alerting-rules/manage-contact-points/integrations/#list-of-supported-integrations)
+  - [Self-host your own ntfy server](https://docs.ntfy.sh/install)
+  - Any other [integration supported by Grafana Alerting](https://grafana.com/docs/grafana/latest/alerting/alerting-rules/manage-contact-points/integrations/#list-of-supported-integrations)
