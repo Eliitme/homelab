@@ -35,14 +35,6 @@ argocd-apps:
   applicationsets:
     root:
       namespace: argocd
-      generators:
-        - git:
-            repoURL: &repoURL http://gitea-http.gitea:3000/ops/homelab
-            revision: &revision master
-            directories:
-              - path: system/*
-              - path: platform/*
-              - path: apps/*
       template:
         metadata:
           name: "{{path.basename}}"
